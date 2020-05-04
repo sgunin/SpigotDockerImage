@@ -32,4 +32,7 @@ FROM base as production
 USER spigot
 WORKDIR /spigot
 COPY --from=builder /spigot/spigot-$VER.jar .
-RUN ls -la .
+ADD eula.txt .
+ADD server.properties .
+EXPOSE 25565
+RUN java -Xmx4096M -Xms4096M -jar spigot-$VER.jar
