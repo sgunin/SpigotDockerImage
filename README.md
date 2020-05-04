@@ -1,0 +1,2 @@
+# SpigotDockerImage
+Spigot docker image
